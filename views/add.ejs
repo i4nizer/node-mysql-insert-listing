@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <title>Add Product</title>
+</head>
+<body>
+    <a href="/product/view" class="btn">View Products</a>
+    <form action="/product/add" method="post">
+        <label for="name">Product</label>
+        <input type="text" name="name" placeholder="Product name" required>
+        <br>
+        <label for="description">Description</label>
+        <input type="text" name="description" placeholder="Brief Description" required>
+        <br>
+        <label for="price">Price</label>
+        <input type="text" name="price" placeholder="Php 00.00" required>
+        <br>
+        <label for="quantity">Quantity</label>
+        <input type="text" name="quantity" placeholder="Quantity" required>
+        <br>
+        <button type="submit">Add Product</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <title>View Products</title>
+</head>
+<body>
+    <a class="btn" href="/product/add">Add Products</a>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Date Created</th>
+            <th>Date Updated</th>
+        </tr>
+        <% products.forEach(product => { %>
+            <tr>
+                <td><%= product.id %></td>
+                <td><%= product.name %></td>
+                <td><%= product.description %></td>
+                <td><%= product.price %></td>
+                <td><%= product.quantity %></td>
+                <td><%= product.create_at.toLocaleString() %></td>
+                <td><%= product.update_at.toLocaleString() %></td>
+            </tr>
+        <% }); %>
+    </table>
+</body>
+</html>
